@@ -7,10 +7,9 @@ import { useContext,useEffect,useState } from 'react';
 
 async function  getData() {
 
-  const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags');
+  const response = await fetch('http://localhost:3000/api');
   let data = await response.json();
-  console.log(data[0])
-  return data;
+  return data.data;
 }
 
 
